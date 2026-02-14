@@ -11,11 +11,22 @@
 Skills are specialized instruction files that teach AI assistants how to handle specific tasks. Think of them as expert knowledge modules that your AI can load on-demand.
 **Simple analogy:** Just like you might consult different experts (a lawyer, a doctor, a mechanic), these skills let your AI become an expert in different areas when you need them.
 
-### Do I need to install all 552+ skills?
+### Do I need to install all 700+ skills?
 
 **No!** When you clone the repository, all skills are available, but your AI only loads them when you explicitly invoke them with `@skill-name`.
 It's like having a library - all books are there, but you only read the ones you need.
 **Pro Tip:** Use [Starter Packs](BUNDLES.md) to install only what matches your role.
+
+### What is the difference between Bundles and Workflows?
+
+- **Bundles** are curated recommendations grouped by role or domain.
+- **Workflows** are ordered execution playbooks for concrete outcomes.
+
+Use bundles when you are deciding *which skills* to include. Use workflows when you need *step-by-step execution*.
+
+Start from:
+- [BUNDLES.md](BUNDLES.md)
+- [WORKFLOWS.md](WORKFLOWS.md)
 
 ### Which AI tools work with these skills?
 
@@ -41,7 +52,7 @@ The skill files themselves are stored locally on your computer, but your AI assi
 
 ---
 
-## 🔒 Security & Trust (V3 Update)
+## 🔒 Security & Trust (V4 Update)
 
 ### What do the Risk Labels mean?
 
@@ -62,7 +73,11 @@ _Always check the Risk label and review the code._
 
 ### Where should I install the skills?
 
-The universal path that works with most tools is `.agent/skills/`:
+The universal path that works with most tools is `.agent/skills/`.
+
+**Using npx:** `npx antigravity-awesome-skills` (or `npx github:sickn33/antigravity-awesome-skills` if you get a 404).
+
+**Using git clone:**
 
 ```bash
 git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skills
@@ -72,6 +87,7 @@ git clone https://github.com/sickn33/antigravity-awesome-skills.git .agent/skill
 
 - Claude Code: `.claude/skills/`
 - Gemini CLI: `.gemini/skills/`
+- Codex CLI: `.codex/skills/`
 - Cursor: `.cursor/skills/` or project root
 
 ### Does this work with Windows?
@@ -156,7 +172,7 @@ Include:
 
 ### My PR failed "Quality Bar" check. Why?
 
-V3 introduces automated quality control. Your skill might be missing:
+V4 introduces automated quality control. Your skill might be missing:
 
 1. A valid `description`.
 2. Usage examples.
